@@ -14,7 +14,7 @@
             margin: 0;
             position: relative;
             overflow: hidden;
-            background-color: black; /* Set background color */
+            background-color: black; 
         }
         h1 {
             font-size: 2em;
@@ -23,8 +23,8 @@
             color: white;
         }
         .dragon-container {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             overflow: hidden;
             margin-bottom: 20px;
@@ -41,8 +41,8 @@
             position: absolute;
             width: 10px;
             height: 10px;
-            background-color: #ffcc00; /* Default color */
-            z-index: 3; /* Adjusted z-index */
+            background-color: #ffcc00; 
+            z-index: 3; 
         }
         @keyframes confetti-fall {
             0% {
@@ -66,7 +66,7 @@
     </style>
 </head>
 <body>
-    <h1>黄老师新年快乐!</h1>
+    <h1>黄 老 师 新 年 快 乐!</h1>
     <div class="dragon-container">
         <img class="dragon-image" src="https://ih0.redbubble.net/image.5374432713.5994/raf,360x360,075,t,fafafa:ca443f4786.jpg" alt="3D Dragon">
     </div>
@@ -76,20 +76,20 @@
     </video>
     <script>
         function createConfetti() {
-            const colors = ['#00ff00', '#0000ff', '#ff00ff', '#ffff00']; // Green, Blue, Magenta, Yellow
+            const colors = ['#00ff00', '#0000ff', '#ff00ff', '#ffff00']; 
             const confetti = document.createElement('div');
             confetti.classList.add('confetti');
             confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
             confetti.style.left = `${Math.random() * 100}vw`;
-            confetti.style.top = '0'; // Set top to start from the top of the viewport
-            confetti.style.animation = 'confetti-fall 5s linear'; // Adjust the duration as needed
+            confetti.style.top = '0'; 
+            confetti.style.animation = 'confetti-fall 5s linear'; 
             document.body.appendChild(confetti);
             confetti.addEventListener('animationend', () => {
                 confetti.remove();
             });
         }
 
-        setInterval(createConfetti, 50); // Create a new confetti every 0.05 seconds
+        setInterval(createConfetti, 50); 
     </script>
 </body>
 </html>
